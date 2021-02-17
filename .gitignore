@@ -9,6 +9,8 @@ __pycache__/
 # Distribution / packaging
 .Python
 .idea/
+dataloader/
+pretrained_models/
 build/
 develop-eggs/
 dist/
