@@ -37,7 +37,7 @@ print('loading raw data')
 word_embeddings_dim = 300
 word_embeddings = {}
 
-with open('models/glove.6B.' + str(word_embeddings_dim) + 'd.txt', 'r') as f:
+with open('pretrained_models/glove.6B.' + str(word_embeddings_dim) + 'd.txt', 'r') as f:
     for line in tqdm(f.readlines()):
         data = line.split()
         word_embeddings[str(data[0])] = list(map(float, data[1:]))
