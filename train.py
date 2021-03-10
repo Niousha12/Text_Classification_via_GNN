@@ -44,7 +44,6 @@ def train():
             emb = emb.float().cuda()
             y = y.float().cuda()
             optimizer.zero_grad()
-            # train_feature, train_adj, train_mask
 
             y = torch.argmax(y, dim=1)
 
@@ -61,7 +60,6 @@ def train():
         if epoch % 50 == 0:
             torch.save(net.state_dict(), './checkpoint/net_epoch_{}.pth'.format(epoch))
             torch.save(optimizer.state_dict(), './checkpoint/opt_epoch{}.pth'.format(epoch))
-            # test(net, dataloader, test_dataloader, epoch)
     log.close()
 
 
