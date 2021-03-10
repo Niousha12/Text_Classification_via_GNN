@@ -96,20 +96,3 @@ class GNN(nn.Module):
         graph = self.graph(inputs, adj_matrix, mask)
         output = self.readout(graph, mask)
         return output
-
-
-# my_nn = GraphLayer(input_dim=300, output_dim=96, steps=2)
-# my_readout = ReadoutLayer(input_dim=96, output_dim=4)
-
-# net = GNN(input_dim=300, hidden_dim=96, output_dim=4)
-#
-# train_adj = torch.rand(20, 38, 38)
-# train_mask = torch.rand(20, 38, 1)
-# train_feature = torch.rand(20, 38, 300)
-#
-# # print(my_nn)
-#
-# out = net.forward(train_feature, train_adj, train_mask)
-# # out = my_readout(out, train_mask)
-#
-# print(out.shape)
